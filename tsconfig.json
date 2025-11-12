@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    /* ---- Basic ---- */
+    "target": "ES2020", // Output modern JS
+    "module": "CommonJS", // Node.js compatible
+    "lib": ["ES2020"], // Include modern JS features
+    "moduleResolution": "node", // How modules are resolved
+    "esModuleInterop": true, // Allow default imports for CommonJS modules
+    "skipLibCheck": true, // Faster builds, skip .d.ts checking
+    "strict": true, // Enable all strict type checks
+    "forceConsistentCasingInFileNames": true,
+    "ignoreDeprecations": "6.0",
+
+    /* ---- Paths ---- */
+    "rootDir": ".", // Your source files' root
+    "outDir": "dist", // Output folder for compiled JS
+
+    /* ---- Helpful for Prisma/Node ---- */
+    "resolveJsonModule": true, // Allow importing JSON files
+    "isolatedModules": true, // Works with ts-node
+    "noEmitOnError": false // Don’t block emit on type errors
+  },
+  "include": ["**/*.ts", "prisma/**/*.ts"], // Include app + Prisma files
+  "exclude": ["node_modules", "dist"] // Skip output & dependencies
+}
